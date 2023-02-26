@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+}
+.gridContainer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1a1a1a;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    gap: 5px 5px;
+}
+.navbar {
+    grid-area: "navbar";
+    grid-row: span 1;
+    grid-column: span 5;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: 1c1c1c;
+}
+.content {
+    grid-area: "content";
+    grid-row: span 9;
+    grid-column: span 4;
+}
+.sidebar {  
+    grid-area: "sidebar";
+    grid-row: span 9;
+    grid-column: span 1;
+}
+.footer {
+    grid-area: "footer";
+    grid-row: span 1;
+    grid-column: span 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.gridItem {
+    background-color: #242424;
+}
+.navbar ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100%;
+    font-weight: 500;
+}
+.navbarHover:hover {
+    /* background-color: #333333; */
+    color: #7b639d;
+    cursor: pointer;
+}
+.navbarFlexItem {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 1;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.navbarSearch {
+    flex-grow: 3;
+    flex-shrink: 0;
+    flex-basis: 2;
+}
+.navbarLogo {
+    font-size: 2rem;
+    padding-bottom: 0.5px;
+    color: white;
+}
+.navbarSearchText {
+    margin: 0;
+    width: 80%;
+    padding-left: 5px;
+    border-radius: 15px 0 0 15px;
+    background-color: #141414;
+    text-align: left;
+    border-left: #7b639d solid 2px;
+    border-right: none;
+}
+.navbarSearchButton {
+    margin: 0;
+    width: 10%;
+    font-size: 25px;
+    color: white;
+    background-color: #1a1a1a;
+    border-radius: 0 15px 15px 0;
+    border-right: #7b639d solid 2px;
+    border-left: none;
+}
+.navbarSearchButton:hover {
+    cursor: pointer;
+}
+.navbarSearchText, .navbarSearchButton {
+    height: 50%;
+    font-size: 30px;
+    border-top: none;
+    border-bottom: none;
+}
